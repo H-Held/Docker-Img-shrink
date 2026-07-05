@@ -1,0 +1,10 @@
+Input/*
+!Input/.gitkeep
+Output/
+wait_upload.py
+*.img
+*.gz
+*.bz2
+*.xz
+.venv/
+*.txt

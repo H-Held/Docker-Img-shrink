@@ -1,0 +1,10 @@
+services:
+  pishrink:
+    build: .
+    privileged: true
+    volumes:
+      - ./Input:/input:ro
+      - ./Output:/output
+    command: ["/opt/run.sh"]
+
+# End of docker-compose.yml

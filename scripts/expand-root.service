@@ -1,0 +1,13 @@
+[Unit]
+Description=One-shot root filesystem expansion
+DefaultDependencies=no
+After=local-fs.target
+Before=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/expand-root.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
