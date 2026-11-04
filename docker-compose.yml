@@ -2,9 +2,13 @@ services:
   pishrink:
     build: .
     privileged: true
+    environment:
+      # Output file name without extension. Empty = "<input name>_shrunk"
+      OUT_NAME: ""
+      # gz = .img.gz (Raspberry Pi Imager, balenaEtcher)
+      # none = raw .img (Win32 Disk Imager can only write raw .img)
+      COMPRESS: "gz"
     volumes:
       - ./Input:/input:ro
       - ./Output:/output
     command: ["/opt/run.sh"]
-
-# End of docker-compose.yml
