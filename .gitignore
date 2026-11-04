@@ -8,3 +8,13 @@ wait_upload.py
 *.xz
 .venv/
 *.txt
+# commit-waechter: only the graph overview is versioned
+.commit-waechter/*
+!.commit-waechter/GRAPH.md
+# caches of the checking tools
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.vscode/
